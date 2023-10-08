@@ -1,0 +1,163 @@
+getgenv().AnimationOngoing = false
+getgenv().CreatedVexHubNotificationLibrary = false
+getgenv().OnCooldown = false
+local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Notification%20Library"))()
+local TweenService = game:GetService("TweenService")
+
+_G.settingsTable = {
+UIScale = "1.05";
+ButtonTopLeft = true;
+Wallpaper = "11926598891";
+WhiteBackground = true;
+OpenButtonFloating = false;
+EnabledNotifications = true;
+AnimationDelay = 0.6;
+}
+
+for i,v in pairs(_G.settingsTable) do 
+end
+
+local filename = "VexHubSettings.txt";
+
+function loadSettings()
+local HttpService = game:GetService("HttpService")
+if (readfile and isfile and isfile(filename)) then
+_G.settingsTable = HttpService:JSONDecode(readfile(filename));
+for i,v in pairs(_G.settingsTable) do 
+end
+end
+end
+
+function saveSettings()
+local json;
+local HttpService = game:GetService("HttpService"); 
+if (writefile) then
+json = HttpService:JSONEncode(_G.settingsTable);
+writefile(filename, json);
+end
+end
+
+loadSettings()
+wait()
+
+getgenv().AnimationDelay = _G.settingsTable.AnimationDelay
+
+local WallpaperPath = _G.settingsTable.Wallpaper
+if string.find(WallpaperPath, ".png") then
+if not isfile(WallpaperPath) then
+getgenv().DidNotFindFileName = WallpaperPath
+_G.settingsTable.Wallpaper = "11926598891"
+saveSettings()
+Notification:Create("VexHub Wallpaper Was Force Changed!", getgenv().DidNotFindFileName.." Is No Longer In Your Exploits Workspace Or Wasn't In Your Exploits Workspace.",5)
+end
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/CoreScreen"))()
+
+-- (VOID) : Gui to Lua
+-- Version: 1.4
+
+-- Instances:
+
+local LoadingFrame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+
+--Properties:
+
+LoadingFrame.Name = "LoadingFrame"
+LoadingFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+LoadingFrame.Active = true
+LoadingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoadingFrame.BackgroundTransparency = 0.7
+LoadingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LoadingFrame.BorderSizePixel = 0
+LoadingFrame.ZIndex = 2
+LoadingFrame.LayoutOrder = 1000
+LoadingFrame.Size = UDim2.new(0, 400, 0, 230)
+
+ImageLabel.Parent = LoadingFrame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.375, 0, 0.282608688, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://14803348752"
+ImageLabel.ZIndex = 3
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = LoadingFrame
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient.Rotation = 45
+UIGradient.Parent = LoadingFrame
+
+-- Scripts:
+
+local function OETQD_fake_script() -- ImageLabel.LocalScript 
+	local script = Instance.new('LocalScript', ImageLabel)
+
+	local TweenService = game:GetService("TweenService")
+	
+	coroutine.wrap(function()
+		while wait() do
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {Rotation = 5}):Play()
+			wait(0.5)
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {Rotation = -5}):Play()
+			wait(0.5)
+		end
+	end)()
+	
+	coroutine.wrap(function()
+		while wait() do
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(255, 255, 255)}):Play()
+			wait(1)
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(255, 0, 0)}):Play()
+			wait(1)
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(255, 255, 0)}):Play()
+			wait(1)
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(0, 255, 0)}):Play()
+			wait(1)
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(0, 255, 255)}):Play()
+			wait(1)
+			TweenService:Create(script.Parent, TweenInfo.new(0.5), {ImageColor3 = Color3.fromRGB(0, 0, 255)}):Play()
+			wait(1)
+		end
+	end)()
+end
+coroutine.wrap(OETQD_fake_script)()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SupportPage"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SettingsPage"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/HomePage"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/TabsContents"))()
+
+function CloneTabsContents()
+local TabsContents = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.TabsContents
+TabsContents:Clone()
+
+TabsContents:Clone().Name = "TabsContents"
+TabsContents:Clone().Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/FloatingOpenButton"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts1"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/RequiredAccessories1"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/GUIS1"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations1"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Commands1"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/OtherHubs1"))()
+TweenService:Create(LoadingFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
+TweenService:Create(ImageLabel, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
+wait(getgenv().AnimationDelay)
+LoadingFrame.Visible = false
+LoadingFrame.BackgroundTransparency = 0.7
+ImageLabel.ImageTransparency = 0
