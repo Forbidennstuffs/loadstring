@@ -70,7 +70,7 @@ local UIGradient = Instance.new("UIGradient")
 LoadingFrame.Name = "LoadingFrame"
 LoadingFrame.Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 LoadingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-LoadingFrame.BackgroundTransparency = 0.7
+LoadingFrame.BackgroundTransparency = 1
 LoadingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 LoadingFrame.BorderSizePixel = 0
 LoadingFrame.ZIndex = 2
@@ -86,6 +86,7 @@ ImageLabel.Position = UDim2.new(0.375, 0, 0.282608688, 0)
 ImageLabel.Size = UDim2.new(0, 100, 0, 100)
 ImageLabel.Image = "rbxassetid://14803348752"
 ImageLabel.ZIndex = 3
+ImageLabel.ImageTransparency = 1
 
 UICorner.CornerRadius = UDim.new(0, 15)
 UICorner.Parent = LoadingFrame
@@ -129,6 +130,10 @@ local function OETQD_fake_script() -- ImageLabel.LocalScript
 end
 coroutine.wrap(OETQD_fake_script)()
 
+PlayAnimation:Create("Appear", "DragImage", "0", "1")
+TweenService:Create(LoadingFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.7}):Play()
+TweenService:Create(ImageLabel, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SupportPage"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SettingsPage"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/HomePage"))()
@@ -157,8 +162,8 @@ CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/OtherHubs1"))()
 TweenService:Create(LoadingFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ImageLabel, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
-wait(getgenv().AnimationDelay)
 PlayAnimation:Create("Appear", "HomePage", "0", "1")
+wait(getgenv().AnimationDelay)
 LoadingFrame.Visible = false
 LoadingFrame.BackgroundTransparency = 0.7
 ImageLabel.ImageTransparency = 0
