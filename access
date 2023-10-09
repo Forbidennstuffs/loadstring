@@ -130,7 +130,12 @@ local function OETQD_fake_script() -- ImageLabel.LocalScript
 end
 coroutine.wrap(OETQD_fake_script)()
 
-PlayAnimation:Create("Appear", "DragImage", "0", "1")
+local DragImagePath = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
+DragImagePath.BackgroundTransparency = 1
+DragImagePath.ImageTransparency = 1
+DragImagePath.Visible = true
+TweenService:Create(DragImagePath, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
+TweenService:Create(DragImagePath, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
 TweenService:Create(LoadingFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.7}):Play()
 TweenService:Create(ImageLabel, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
 
