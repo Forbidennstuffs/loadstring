@@ -64,6 +64,7 @@ local LoadingFrame = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner = Instance.new("UICorner")
 local UIGradient = Instance.new("UIGradient")
+local Status = Instance.new("TextLabel")
 
 --Properties:
 
@@ -94,6 +95,22 @@ UICorner.Parent = LoadingFrame
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
 UIGradient.Rotation = 45
 UIGradient.Parent = LoadingFrame
+
+Status.Name = "Status"
+Status.Parent = LoadingFrame
+Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Status.BackgroundTransparency = 1.000
+Status.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Status.BorderSizePixel = 0
+Status.Position = UDim2.new(0.0125000002, 0, 0.0217391308, 0)
+Status.Size = UDim2.new(0, 390, 0, 220)
+Status.Font = Enum.Font.Gotham
+Status.Text = ""
+Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+Status.TextSize = 7.000
+Status.TextWrapped = true
+Status.TextXAlignment = Enum.TextXAlignment.Left
+Status.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
 
