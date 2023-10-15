@@ -136,6 +136,7 @@ DragImagePath.ImageTransparency = 1
 DragImagePath.Visible = true
 TweenService:Create(DragImagePath, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(DragImagePath, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
+wait(getgenv().AnimationDelay/2)
 TweenService:Create(LoadingFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.7}):Play()
 TweenService:Create(ImageLabel, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
 
@@ -155,6 +156,10 @@ end
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/FloatingOpenButton"))()
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts1"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts2"))()
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts3"))()
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/RequiredAccessories1"))()
 CloneTabsContents()
