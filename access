@@ -105,13 +105,15 @@ Status.BorderSizePixel = 0
 Status.Position = UDim2.new(0.0125000002, 0, 0.0217391308, 0)
 Status.Size = UDim2.new(0, 390, 0, 220)
 Status.Font = Enum.Font.Gotham
-Status.Text = ""
+Status.RichText = true
+Status.Text = 'Hello World!\n<font color="rgb(255,255,0)">Loading CoreScreen</font>\n<font color="rgb(0,255,0)">Loaded CoreScreen</font>\n<font color="rgb(255,255,0)">Loading Loading Frame</font>'
 Status.TextColor3 = Color3.fromRGB(255, 255, 255)
-Status.TextSize = 7.000
+Status.TextSize = 5.000
 Status.TextWrapped = true
 Status.TextXAlignment = Enum.TextXAlignment.Left
 Status.TextYAlignment = Enum.TextYAlignment.Top
 
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Loaded Loading Frame</font>'
 -- Scripts:
 
 local function OETQD_fake_script() -- ImageLabel.LocalScript 
@@ -153,15 +155,24 @@ DragImagePath.ImageTransparency = 1
 DragImagePath.Visible = true
 TweenService:Create(DragImagePath, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0}):Play()
 TweenService:Create(DragImagePath, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0.5}):Play()
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Appearing DragImage And Loading Frame</font>'
 wait(getgenv().AnimationDelay/2)
 TweenService:Create(LoadingFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 0.7}):Play()
 TweenService:Create(ImageLabel, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 0}):Play()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Appeared DragImage And Loading Frame</font>'
 
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Loading Support Page</font>'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SupportPage"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Loaded Support Page</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Loading Settings Page</font>'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/SettingsPage"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Loaded Settings Page</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Loading Home Page</font>'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/HomePage"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Loaded Home Page</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Loading TabsContents</font>'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/TabsContents"))()
-
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Loaded TabsContents</font>'
 function CloneTabsContents()
 local TabsContents = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.TabsContents
 TabsContents:Clone()
@@ -170,23 +181,53 @@ TabsContents:Clone().Name = "TabsContents"
 TabsContents:Clone().Parent = game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage
 end
 
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Loading Floating Button</font>'
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/FloatingOpenButton"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Loaded Floating Button</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Scripts Page 1</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts1"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Scripts Page 1</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Scripts Page 2</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts2"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Scripts Page 2</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Scripts Page 3</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts3"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Scripts Page 3</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Scripts Page 4</font>'
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts4"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Scripts Page 4</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Scripts Page 5</font>'
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts5"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Scripts Page 5</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Scripts Page 6</font>'
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Scripts6"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Scripts Page 6</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Required Accessories Page 1</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/RequiredAccessories1"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Required Accessories Page 1</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create GUIS Page 1</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/GUIS1"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created GUIS Page 1</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Animations Page 1</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations1"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Animations Page 1</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Commands Page 1</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Commands1"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Commands Page 1</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Other Hubs Page 1</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/OtherHubs1"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created Other Hubs Page 1</font>'
 TweenService:Create(LoadingFrame, TweenInfo.new(getgenv().AnimationDelay), {BackgroundTransparency = 1}):Play()
 TweenService:Create(ImageLabel, TweenInfo.new(getgenv().AnimationDelay), {ImageTransparency = 1}):Play()
 PlayAnimation:Create("Appear", "HomePage", "0", "1")
