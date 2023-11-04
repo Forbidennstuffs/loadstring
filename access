@@ -224,6 +224,18 @@ Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents 
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/GUIS1"))()
 Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created GUIS Page 1</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create GUIS Page 2</font>'
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/GUIS2"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created GUIS Page 2</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create GUIS Page 3</font>'
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/GUIS3"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created GUIS Page 3</font>'
+Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create GUIS Page 4</font>'
+CloneTabsContents()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/GUIS4"))()
+Status.Text = Status.Text..'\n<font color="rgb(0,255,0)">Cloned TabsContents And Created GUIS Page 4</font>'
 Status.Text = Status.Text..'\n<font color="rgb(255,255,0)">Cloning TabsContents And Pasting Button Functions And Text To Create Animations Page 1</font>'
 CloneTabsContents()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Forbidennstuffs/SumStuff/main/Animations1"))()
